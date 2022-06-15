@@ -53,8 +53,3 @@ class BlogLogout(LogoutView):
 
 
     
-class SignUpView(SuccessMessageMixin, CreateView):
-  template_name = 'blog/blog_crear_cuenta_form.html'
-  success_url = reverse_lazy('blog_login')
-  form_class = UserCreationForm
-  success_message = "Your profile was created successfully"
