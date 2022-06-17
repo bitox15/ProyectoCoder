@@ -9,5 +9,6 @@ urlpatterns = [
     path("borrar/<pk>/", views.BlogDelete.as_view(), name ="blog_delete"),
     path("entrar/", views.BlogLogin.as_view(), name="blog_login"),
     path("salir/", views.BlogLogout.as_view(), name="blog_logout"),
+    path("no_autorizado/", views.no_autorizado, name="no_autorizado"),
     
 ]
