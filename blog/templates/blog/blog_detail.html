@@ -3,7 +3,7 @@
 {% load bootstrap5 %}
 
 {% block cuerpo %}
-    <a href="{% url 'blog_list' %}">Volver a Lista</a>
+    <a href="{% url 'blog_list' %}" <button type="button" class="btn btn-secondary"></button>Volver a Lista</a>
     <div>
         <h1>{{object.titulo}}</h1>
         <h2>{{object.sub_titulo}}</h2>

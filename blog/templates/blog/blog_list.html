@@ -4,12 +4,12 @@
 
 {% block cuerpo %}
   {% if user.is_authenticated %}
-    <a href="{% url 'blog_logout' %}">Salir</a>
-    <a href="{% url 'blog_create' %}">Nuevo Blog</a>
-    <a href="{% url 'blogUser_profile' user.id %}">Perfil {{user.username}}</a>
+    <a href="{% url 'blog_logout' %}" <button type="button" class="btn btn-secondary"></button>Salir</a>
+    <a href="{% url 'blog_create' %}" <button type="button" class="btn btn-secondary"></button>Nuevo Blog</a>
+    <a href="{% url 'blogUser_profile' user.id %}" <button type="button" class="btn btn-secondary"></button>Perfil {{user.username}}</a>
   {% else %}
-    <a href="{% url 'blog_login' %}">Entrar</a>
-    <a href="{% url 'blogUser_signup' %}">Crear Cuenta</a>
+    <a href="{% url 'blog_login' %}" <button type="button" class="btn btn-secondary"></button>Entrar</a>
+    <a href="{% url 'blogUser_signup' %}" <button type="button" class="btn btn-secondary"></button>Crear Cuenta</a>
   {% endif %}
   
 
@@ -17,10 +17,10 @@
       {% for blog in object_list %}
       <li>
         
-          <a href="{% url 'blog_detail' blog.id %}">{{blog.titulo}}</a>
+          <a href="{% url 'blog_detail' blog.id %}" <button type="button" class="btn btn-secondary"></button>{{blog.titulo}}</a>
           {% if user.is_authenticated %}
-            <a href="{% url 'blog_delete' blog.id %}">Borrar</a>
-            <a href="{% url 'blog_update' blog.id %}">Actualizar</a>
+            <a href="{% url 'blog_delete' blog.id %}" <button type="button" class="btn btn-secondary"></button>Borrar</a>
+            <a href="{% url 'blog_update' blog.id %}" <button type="button" class="btn btn-secondary"></button>Actualizar</a>
           {% endif %}
       </li>
       {% endfor %}

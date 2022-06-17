@@ -1,7 +1,14 @@
-<a href="{% url 'blogUser_profile' user.id %}">Volver a Profile</a>
+{% extends "blog/header_footer.html" %}
+
+{% load bootstrap5 %}
+
+{% block cuerpo %}
+
+<a href="{% url 'blogUser_profile' user.id %}" <button type="button" class="btn btn-secondary"></button>Volver a Profile</a>
 
 <form method="post">
     {% csrf_token %}
     {{ form.as_p }}
     <input type="submit" value="Guardar">
 </form>
+{% endblock %}

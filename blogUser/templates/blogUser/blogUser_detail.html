@@ -1,5 +1,12 @@
-<a href="{% url 'blog_list' %}">Volver a Lista Blogs</a>
-<a href="{% url 'blogUser_edit' user.id %}">Editar Perfil</a>
+{% extends "blog/header_footer.html" %}
+
+{% load bootstrap5 %}
+
+{% block cuerpo %}
+
+
+<a href="{% url 'blog_list' %}" <button type="button" class="btn btn-secondary"></button>Volver a Lista Blogs</a>
+<a href="{% url 'blogUser_edit' user.id %}" <button type="button" class="btn btn-secondary"></button>Editar Perfil</a>
 
 <ul>
     <li>Nombre: {{object.first_name}}<li>
@@ -8,3 +15,4 @@
     <li>Nombre de Usuario: {{object.username}}</li>
 </ul>
 
+{% endblock %}
